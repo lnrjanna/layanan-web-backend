@@ -44,7 +44,6 @@ router.get('/:user_id', (req, res) => {
   db.query(query, [user_id], (err, result) => {
     if (err) return res.status(500).json({ message: 'Gagal ambil keranjang', error: err });
 
-    // parse images
     const data = result.map(item => ({
       ...item,
       images: JSON.parse(item.images || '[]')
