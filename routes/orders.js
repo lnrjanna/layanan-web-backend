@@ -112,7 +112,7 @@ router.get('/:user_id', (req, res) => {
       ordersMap[orderId].items.push({
         id: row.item_id,
         name: row.product_name,
-        image: JSON.parse(row.product_images || '[]')[0], // ambil gambar pertama
+        image: JSON.parse(row.product_images || '[]')[0], 
         size: row.size,
         quantity: row.quantity,
         price: row.price
