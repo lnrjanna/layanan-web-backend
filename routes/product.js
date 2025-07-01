@@ -47,10 +47,7 @@ router.delete('/:id', (req, res) => {
   });
 });
 
-
-
 // Update data produk + gambar
-// route PUT /api/products/:id (update teks + gambar)
 router.put('/:id', upload.array('images', 6), (req, res) => {
   const { name, category, stock, price, weight, description, sizes, oldImages } = req.body;
   let imagesArr = Array.isArray(oldImages) ? oldImages : JSON.parse(oldImages || '[]');
