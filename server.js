@@ -81,20 +81,6 @@ app.delete('/api/products/:id', (req, res) => {
   });
 });
 
-// ===== API: Update Status Produk =====
-//app.put('/api/products/:id/status', (req, res) => {
-//  const { status } = req.body;
-//  const productId = req.params.id;
-//  db.query(
-//    'UPDATE products SET status = ? WHERE id = ?',
-//    [status, productId],
-//    err => {
-//      if (err) return res.status(500).json({ message: 'Gagal update status', error: err });
-//      res.status(200).json({ message: `Status produk berhasil diubah ke ${status}` });
-//    }
-//  );
-//});
-
 // === SIGNUP
 app.post('/api/signup', (req, res) => {
   const { name, email, password } = req.body;
